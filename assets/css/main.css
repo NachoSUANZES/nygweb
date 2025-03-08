@@ -187,7 +187,7 @@ html {
 }
 
 body {
-  background: #312450;
+  background: #062434;
 }
 
 body.is-preload *,
@@ -3282,7 +3282,6 @@ table.alt tfoot {
 
 /* Estilo para el logo */
 #sidebar .logo {
-  text-align: center;
   margin-bottom: 2em;
 }
 
@@ -3294,7 +3293,6 @@ table.alt tfoot {
 /* Logo para móviles y tablets */
 .mobile-logo {
   display: none;
-  text-align: center;
   padding: 1em;
   background: #062434;
   width: 100%;
@@ -3357,7 +3355,7 @@ table.alt tfoot {
 }
 
 .wrapper.alt {
-  background-color: #261c3e;
+  background-color: #0a3b56;
 }
 
 .wrapper.style1 {
@@ -3365,7 +3363,7 @@ table.alt tfoot {
 }
 
 .wrapper.style1-alt {
-  background-color: #493382;
+  background-color: #0a3b56;
 }
 
 .wrapper.style2 {
