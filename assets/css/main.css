@@ -3291,14 +3291,37 @@ table.alt tfoot {
   height: auto;
 }
 
-/* Para dispositivos móviles */
-@media screen and (max-width: 736px) {
-  #sidebar .logo {
-    margin-bottom: 1em;
+/* Logo para móviles y tablets */
+.mobile-logo {
+  display: none;
+  text-align: center;
+  padding: 1em;
+  background: #062434;
+  width: 100%;
+  z-index: 10001; /* Aseguramos que esté por encima de otros elementos */
+}
+
+.mobile-logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+@media screen and (min-width: 481px) and (max-width: 1280px) {
+  .mobile-logo {
+    display: block;
+    padding-top: 5em; /* Para dejar espacio para la barra de navegación superior */
   }
 
-  #sidebar .logo img {
-    max-width: 50%;
+  #intro {
+    padding-top: 2em !important; /* Sobrescribir cualquier otro padding */
+  }
+}
+
+/* Mostrar en móviles (menos de 481px) */
+@media screen and (max-width: 480px) {
+  .mobile-logo {
+    display: block;
+    padding-top: 1em;
   }
 }
 
