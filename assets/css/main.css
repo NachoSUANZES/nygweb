@@ -4028,3 +4028,17 @@ body.is-preload #sidebar nav ul li {
     background-attachment: scroll;
   }
 }
+/* Aumentar tamaño de texto en párrafos para móviles */
+@media screen and (max-width: 480px) {
+  p {
+    font-size: 1.3em !important; /* Mayor tamaño del texto para móviles */
+    line-height: 1.6em !important; /* Mejora la legibilidad */
+  }
+
+  .spotlights > section > .content p,
+  .wrapper > .inner p,
+  .features section p {
+    font-size: 1.3em !important; /* Asegura que se aplique a todos los contextos */
+    margin-bottom: 1.2em !important; /* Mejor espaciado entre párrafos */
+  }
+}
