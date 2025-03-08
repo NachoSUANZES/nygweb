@@ -3293,16 +3293,32 @@ table.alt tfoot {
 /* Logo para móviles y tablets */
 .mobile-logo {
   display: none;
+  text-align: center;
   padding: 1em;
   background: #062434;
   width: 100%;
   z-index: 10001;
 }
 
-/* Ajuste de tamaño por dispositivo */
+.mobile-logo .logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-bottom: none;
+}
+
 .mobile-logo img {
-  max-width: 150px; /* Tamaño base */
+  max-width: 60px;
   height: auto;
+  margin-right: 15px;
+}
+
+.mobile-logo .company-name {
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
 }
 
 @media screen and (min-width: 481px) and (max-width: 1280px) {
@@ -3310,6 +3326,9 @@ table.alt tfoot {
     display: block;
     padding-top: 5em; /* Para dejar espacio para la barra de navegación superior */
     max-width: 40%;
+  }
+  .mobile-logo .company-name {
+    font-size: 2em; /* Texto un poco más pequeño en móviles */
   }
 
   #intro {
@@ -3322,7 +3341,10 @@ table.alt tfoot {
   .mobile-logo {
     display: block;
     padding-top: 1em;
-    max-width: 25%;
+  }
+
+  .mobile-logo .company-name {
+    font-size: 2em; /* Texto un poco más pequeño en móviles */
   }
 }
 
