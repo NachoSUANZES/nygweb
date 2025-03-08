@@ -3293,7 +3293,6 @@ table.alt tfoot {
 /* Logo para móviles y tablets */
 .mobile-logo {
   display: none;
-  text-align: center;
   padding: 1em;
   background: #062434;
   width: 100%;
@@ -3306,33 +3305,37 @@ table.alt tfoot {
   justify-content: center;
   text-decoration: none;
   border-bottom: none;
+  white-space: nowrap; /* Evita que el texto se corte en múltiples líneas */
 }
 
 .mobile-logo img {
-  max-width: 60px;
+  max-width: 50px; /* Logo más pequeño para dejar más espacio al texto */
   height: auto;
-  margin-right: 15px;
+  margin-right: 12px;
 }
 
 .mobile-logo .company-name {
   color: #ffffff;
-  font-size: 1.2em;
   font-weight: bold;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
+  white-space: nowrap; /* Refuerza que el texto se mantenga en una línea */
+  overflow: hidden; /* Por si acaso el texto es muy largo */
+  text-overflow: ellipsis; /* Por si acaso el texto es muy largo */
 }
 
+/* Mostrar en tablets (entre 481px y 1280px) */
 @media screen and (min-width: 481px) and (max-width: 1280px) {
   .mobile-logo {
     display: block;
-    padding-top: 5em; /* Para dejar espacio para la barra de navegación superior */
-    max-width: 40%;
+    padding-top: 5em;
   }
+
   .mobile-logo .company-name {
-    font-size: 2em; /* Texto un poco más pequeño en móviles */
+    font-size: 1.5em; /* Tamaño apropiado para tablets */
   }
 
   #intro {
-    padding-top: 2em !important; /* Sobrescribir cualquier otro padding */
+    padding-top: 2em !important;
   }
 }
 
@@ -3344,7 +3347,7 @@ table.alt tfoot {
   }
 
   .mobile-logo .company-name {
-    font-size: 2em; /* Texto un poco más pequeño en móviles */
+    font-size: 1.1em; /* Tamaño ajustado para móviles pequeños */
   }
 }
 
