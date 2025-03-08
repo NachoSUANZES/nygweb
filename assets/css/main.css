@@ -3298,11 +3298,12 @@ table.alt tfoot {
   padding: 1em;
   background: #062434;
   width: 100%;
-  z-index: 10001; /* Aseguramos que esté por encima de otros elementos */
+  z-index: 10001;
 }
 
+/* Ajuste de tamaño por dispositivo */
 .mobile-logo img {
-  max-width: 150px;
+  max-width: 150px; /* Tamaño base */
   height: auto;
 }
 
@@ -3310,6 +3311,7 @@ table.alt tfoot {
   .mobile-logo {
     display: block;
     padding-top: 5em; /* Para dejar espacio para la barra de navegación superior */
+    max-width: 40%;
   }
 
   #intro {
@@ -3322,6 +3324,7 @@ table.alt tfoot {
   .mobile-logo {
     display: block;
     padding-top: 1em;
+    max-width: 25%;
   }
 }
 
