@@ -4042,3 +4042,49 @@ body.is-preload #sidebar nav ul li {
     margin-bottom: 1.2em !important; /* Mejor espaciado entre párrafos */
   }
 }
+/* Logo junto al h1 con alineación inferior y tamaño mucho más grande */
+.intro-title {
+  display: flex;
+  align-items: flex-end; /* Alinea los elementos por su parte inferior */
+  margin-bottom: 1em;
+}
+
+.intro-logo {
+  height: 7em; /* Logo mucho más grande */
+  margin-right: 0.8em;
+}
+
+h1 {
+  margin-bottom: 0; /* Eliminar margen inferior para alinear mejor */
+  align-self: flex-end; /* Asegura que el texto se alinee con la parte inferior */
+  line-height: 1; /* Reduce el espacio de línea */
+}
+
+/* Responsive para diferentes dispositivos */
+@media screen and (max-width: 1280px) {
+  .intro-logo {
+    height: 6em; /* Doble del tamaño original */
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .intro-logo {
+    height: 5em; /* Doble del tamaño original */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .intro-logo {
+    height: 4em; /* Doble del tamaño original */
+  }
+
+  .intro-title {
+    flex-direction: column; /* En móviles muy pequeños, apilar logo y texto */
+    align-items: center;
+  }
+
+  .intro-title h1 {
+    margin-top: 0.3em;
+    text-align: center;
+  }
+}
