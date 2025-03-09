@@ -4069,13 +4069,13 @@ h1 {
 
 @media screen and (max-width: 736px) {
   .intro-logo {
-    height: 7em; /* Doble del tamaño original */
+    height: 8em; /* Doble del tamaño original */
   }
 }
 
 @media screen and (max-width: 480px) {
   .intro-logo {
-    height: 6em; /* Doble del tamaño original */
+    height: 8em; /* Doble del tamaño original */
   }
 
   .intro-title {
