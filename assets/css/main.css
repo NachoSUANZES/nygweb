@@ -4063,19 +4063,19 @@ h1 {
 /* Responsive para diferentes dispositivos */
 @media screen and (max-width: 1280px) {
   .intro-logo {
-    height: 6em; /* Doble del tamaño original */
+    height: 8em; /* Doble del tamaño original */
   }
 }
 
 @media screen and (max-width: 736px) {
   .intro-logo {
-    height: 5em; /* Doble del tamaño original */
+    height: 7em; /* Doble del tamaño original */
   }
 }
 
 @media screen and (max-width: 480px) {
   .intro-logo {
-    height: 4em; /* Doble del tamaño original */
+    height: 6em; /* Doble del tamaño original */
   }
 
   .intro-title {
