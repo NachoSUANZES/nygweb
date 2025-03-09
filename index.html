@@ -245,7 +245,7 @@
           </p>
           <div class="split style1">
             <section>
-              <form method="post" action="#">
+              <form method="post" action="#" onsubmit="return false;">
                 <div class="fields">
                   <div class="field half">
                     <label for="name">Name</label>
@@ -261,7 +261,14 @@
                   </div>
                 </div>
                 <ul class="actions">
-                  <li><a href="" class="button submit">Send Message</a></li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="button submit"
+                      onclick="return false;"
+                      >Send Message</a
+                    >
+                  </li>
                 </ul>
               </form>
             </section>
