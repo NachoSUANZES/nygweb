@@ -8,6 +8,9 @@ import v1mp from '../../assets/images/portfolio/light/v1mp.svg';
 import lnm from '../../assets/images/portfolio/light/lnm.png';
 import impulsion from '../../assets/images/portfolio/light/impulsion.svg';
 import rubid from '../../assets/images/portfolio/light/rubid.webp';
+import makilab from '../../assets/images/portfolio/venture/makilab.svg';
+import makinotes from '../../assets/images/portfolio/venture/makinotes.svg';
+import akorto from '../../assets/images/portfolio/venture/akorto.svg';
 
 const title = 'Selected Portfolio | NYG International Investment';
 const description = 'Explore selected NYG investments in marketing technology, artificial intelligence, automation and digital services.';
@@ -19,6 +22,10 @@ const holdings = [
   { name: 'La Naranja Mecánica', logo: lnm, logoClass: 'portfolio-logo--lnm', sector: 'Digital product & creative', url: null, copy: 'A digital agency combining product thinking, creative execution and conversion-focused customer experiences.' },
   { name: 'Impulsion', logo: impulsion, logoClass: 'portfolio-logo--impulsion', sector: 'Digital advertising', url: 'https://adimpulsion.com/', copy: 'A digital advertising company developing high-attention media solutions across display, video, native, audio, CTV and digital out-of-home.' },
   { name: 'Rubid', logo: rubid, logoClass: 'portfolio-logo--rubid', sector: 'AI & process automation', url: null, copy: 'An applied artificial intelligence company focused on automating complex operational processes and improving business efficiency.' },
+];
+const seedProducts = [
+  { name: 'Makinotes', logo: makinotes, sector: 'Private productivity', url: 'https://makinotes.com/', copy: 'An end-to-end encrypted workspace for fast notes, structured knowledge and actionable tasks across devices.' },
+  { name: 'Akorto', logo: akorto, sector: 'Digital infrastructure', url: 'https://akorto.com/', copy: 'A secure link-management product combining low-friction publishing, passkey access and meaningful analytics.' },
 ];
 ---
 
@@ -42,6 +49,28 @@ const holdings = [
           </div>
         </article>
       ))}
+    </div>
+  </section>
+  <section class="venture-studio">
+    <div class="shell">
+      <div class="venture-studio__intro">
+        <div><p class="eyebrow eyebrow--inverse">Venture studio · Seed</p><h2>Building the next capabilities.</h2></div>
+        <div class="venture-studio__identity">
+          <Image src={makilab} alt="" width={64} />
+          <div><h3>MakiLab</h3><p>NYG's AI-native product studio builds and operates focused software through human product direction, AI-native execution and continuous verification.</p><a class="text-link text-link--inverse" href="https://makilab.dev/" target="_blank" rel="noopener noreferrer">Visit MakiLab <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+      <div class="seed-grid">
+        {seedProducts.map((product) => (
+          <article class="seed-product">
+            <div class="seed-product__logo"><Image src={product.logo} alt={product.name} width={200} /></div>
+            <p class="holding__meta">Seed · {product.sector}</p>
+            <h3>{product.name}</h3>
+            <p>{product.copy}</p>
+            <a class="text-link" href={product.url} target="_blank" rel="noopener noreferrer">Explore product <span aria-hidden="true">↗</span></a>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 </BaseLayout>

@@ -21,6 +21,7 @@
 - Corrected NYG's positioning from third-party wealth management to a privately held company investing its own capital.
 - Replaced the legacy template with a responsive, mobile-first editorial experience and accessible contact flow.
 - Replaced every portfolio mark with its official light-background asset from the corresponding company repository and normalised optical sizing without suppressing brand colours.
+- Added a clearly separated Venture studio · Seed chapter for MakiLab and its current products, Makinotes and Akorto, without mixing early-stage work into the mature holdings list.
 
 ### Security
 
