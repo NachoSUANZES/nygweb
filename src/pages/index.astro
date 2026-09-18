@@ -1,0 +1,125 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArrowLink from '../components/ArrowLink.astro';
+import heroImage from '../assets/images/real-estate.jpg';
+import specialImage from '../assets/images/special-situations.jpg';
+import adgLogo from '../assets/images/portfolio/logo_adg_web.png';
+import impulsionLogo from '../assets/images/portfolio/Logo_Impulsion.png';
+import neuralLogo from '../assets/images/portfolio/Logo_neural.png';
+import rubidLogo from '../assets/images/portfolio/Logo_Rubid.png';
+
+const title = 'NYG International Investment | Patient capital for enduring value';
+const description = 'NYG International Investment is a privately held investment company deploying permanent capital across private equity, real assets and selected special situations.';
+---
+
+<BaseLayout {title} {description}>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__copy">
+      <p class="eyebrow">Private investment company · Madrid</p>
+      <h1 id="hero-title">Patient capital.<br />Enduring value.</h1>
+      <p class="hero__intro">We deploy our own capital with a long-term horizon across private equity, real assets and selected special situations.</p>
+      <div class="hero__actions">
+        <a class="button" href="#focus">Explore our focus</a>
+        <ArrowLink href="#contact">Start a conversation</ArrowLink>
+      </div>
+    </div>
+    <div class="hero__image">
+      <Image src={heroImage} alt="Contemporary residential architecture surrounded by mature landscaping" widths={[480, 720, 1000, 1400]} sizes="(max-width: 900px) 100vw, 47vw" loading="eager" fetchpriority="high" />
+      <div class="hero__caption"><span>Real assets</span><span>Long-term perspective</span></div>
+    </div>
+  </section>
+
+  <section class="mandate" id="focus" aria-labelledby="focus-title">
+    <div class="shell">
+      <div class="mandate__intro">
+        <div>
+          <p class="eyebrow">Investment focus</p>
+          <h2 class="section-title" id="focus-title">Selective by design.</h2>
+        </div>
+        <p class="lede">We concentrate on situations we can understand deeply, where aligned ownership, patient capital and operational perspective can make a material difference.</p>
+      </div>
+      <div class="focus-list">
+        <article class="focus-item">
+          <span class="focus-item__number">01</span>
+          <h3>Private equity</h3>
+          <p>Technology-enabled businesses with credible leadership, durable market relevance and a clear path to compounding value.</p>
+        </article>
+        <article class="focus-item">
+          <span class="focus-item__number">02</span>
+          <h3>Real assets</h3>
+          <p>Distinctive residential and strategic property opportunities where quality, location and scarcity support long-term resilience.</p>
+        </article>
+        <article class="focus-item">
+          <span class="focus-item__number">03</span>
+          <h3>Special situations</h3>
+          <p>Selective, time-sensitive opportunities outside conventional mandates, approached with disciplined downside analysis.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="visual-break" aria-label="Long-term investment perspective">
+    <div class="visual-break__image">
+      <Image src={specialImage} alt="A single vessel viewed from above in open water" widths={[480, 720, 1100, 1500]} sizes="(max-width: 900px) 100vw, 58vw" />
+    </div>
+    <div class="visual-break__copy">
+      <p class="eyebrow eyebrow--inverse">Our horizon</p>
+      <blockquote>Conviction deserves time to compound.</blockquote>
+      <p>We are not constrained by a fixed fund cycle. That permanence lets us remain selective, think in years and support value creation beyond the next reporting period.</p>
+    </div>
+  </section>
+
+  <section class="approach" id="approach" aria-labelledby="approach-title">
+    <div class="shell">
+      <div class="approach__header">
+        <div>
+          <p class="eyebrow">Our approach</p>
+          <h2 class="section-title" id="approach-title">Clarity before capital.</h2>
+        </div>
+        <p class="lede">Every opportunity is tested against the same simple standard: understand the asset, align with capable people, protect the downside and allow the thesis sufficient time.</p>
+      </div>
+      <div class="principles">
+        <article class="principle"><span class="principle__number">01 — Understand</span><h3>Independent judgement</h3><p>We build conviction from primary analysis rather than market momentum or borrowed consensus.</p></article>
+        <article class="principle"><span class="principle__number">02 — Align</span><h3>People matter</h3><p>We look for capable operators whose incentives, candour and ambition are aligned with enduring value.</p></article>
+        <article class="principle"><span class="principle__number">03 — Protect</span><h3>Downside discipline</h3><p>Capital preservation begins before entry, through structure, selectivity and realistic assumptions.</p></article>
+        <article class="principle"><span class="principle__number">04 — Build</span><h3>Patient ownership</h3><p>We give strong theses room to mature and remain engaged where our perspective can be useful.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-preview" aria-labelledby="portfolio-title">
+    <div class="shell">
+      <div class="portfolio-preview__header">
+        <div><p class="eyebrow eyebrow--inverse">Selected portfolio</p><h2 class="section-title" id="portfolio-title">Businesses built to move markets.</h2></div>
+        <ArrowLink href="/portfolio/" inverse={true}>View portfolio</ArrowLink>
+      </div>
+      <div class="logo-rail" aria-label="Selected portfolio company logos">
+        <div class="logo-cell"><Image src={adgLogo} alt="ADG Media Group" width={180} /></div>
+        <div class="logo-cell"><Image src={impulsionLogo} alt="Impulsion" width={180} /></div>
+        <div class="logo-cell"><Image src={neuralLogo} alt="Neural.ONE" width={180} /></div>
+        <div class="logo-cell"><Image src={rubidLogo} alt="Rubid" width={180} /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="shell contact__grid">
+      <div class="contact__copy">
+        <p class="eyebrow">Contact</p>
+        <h2 class="section-title" id="contact-title">The right opportunity starts with a clear conversation.</h2>
+        <p>For relevant investment opportunities, strategic partnerships or portfolio enquiries, write to us at <a href="mailto:nyg@nyginvest.com">nyg@nyginvest.com</a>.</p>
+      </div>
+      <form class="contact-form" action="https://formspree.io/f/xrbpznev" method="post">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required /></div>
+        <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+        <div class="field field--wide"><label for="company">Company</label><input id="company" name="company" autocomplete="organization" /></div>
+        <div class="field field--wide"><label for="message">How can we help?</label><textarea id="message" name="message" required></textarea></div>
+        <div class="honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+        <input type="hidden" name="_subject" value="New enquiry from nyginvest.com" />
+        <p class="contact-form__consent">By sending this form, you agree that NYG may use the information provided to respond to your enquiry. See our <a href="/privacy/">privacy notice</a>.</p>
+        <button class="button" type="submit">Send enquiry</button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>

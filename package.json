@@ -1,0 +1,24 @@
+{
+  "name": "nyg-investment-website",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/update-csp.mjs",
+    "preview": "astro preview",
+    "check": "astro check",
+    "check:seo": "node scripts/check-seo.mjs",
+    "deploy:dry": "wrangler deploy --dry-run --outdir .wrangler/dry-run",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.4",
+    "astro": "7.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "typescript": "6.0.3",
+    "wrangler": "4.134.0"
+  }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">NYG International Investment</title>
+  <desc id="desc">Patient capital for enduring value.</desc>
+  <rect width="1200" height="630" fill="#062434"/>
+  <path d="M0 485c185-77 337-36 505 25 196 72 390 86 695-30v150H0z" fill="#0d3545"/>
+  <path d="M0 521c195-67 352-14 509 39 198 67 390 75 691-39" fill="none" stroke="#3c8991" stroke-width="2"/>
+  <rect x="80" y="74" width="82" height="84" rx="1" fill="#f4f6f5"/>
+  <text x="121" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#062434">NYG</text>
+  <text x="80" y="292" font-family="Arial, sans-serif" font-size="76" font-weight="600" fill="#f4f6f5">Patient capital.</text>
+  <text x="80" y="376" font-family="Arial, sans-serif" font-size="76" font-weight="600" fill="#f4f6f5">Enduring value.</text>
+  <text x="82" y="448" font-family="Arial, sans-serif" font-size="24" fill="#b9c9cf">NYG International Investment</text>
+</svg>

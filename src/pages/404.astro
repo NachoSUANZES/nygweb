@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Page not found | NYG International Investment';
+const description = 'The requested page could not be found.';
+---
+<BaseLayout {title} {description} canonicalPath="/404.html" noindex={true}>
+  <section class="error-page">
+    <div class="shell error-page__inner"><span class="error-page__code">ERROR 404</span><h1>This path leads elsewhere.</h1><p>The page may have moved, or the address may be incomplete. Return to NYG's investment overview.</p><a class="button" href="/">Return home</a></div>
+  </section>
+</BaseLayout>

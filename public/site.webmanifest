@@ -1,0 +1,11 @@
+{
+  "name": "NYG International Investment",
+  "short_name": "NYG",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f4f6f5",
+  "theme_color": "#062434",
+  "icons": [
+    { "src": "/brand/nyg-logo.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

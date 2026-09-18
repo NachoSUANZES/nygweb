@@ -1,0 +1,30 @@
+---
+const pathname = Astro.url.pathname;
+const isHome = pathname === '/';
+---
+
+<header class="site-header">
+  <div class="site-header__inner shell">
+    <a class="brand" href="/" aria-label="NYG International Investment, home">
+      <img src="/brand/nyg-logo.svg" alt="" width="44" height="45" />
+      <span>International<br />Investment</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href={isHome ? '#focus' : '/#focus'}>Focus</a>
+      <a href={isHome ? '#approach' : '/#approach'}>Approach</a>
+      <a class:list={{ active: pathname.startsWith('/portfolio') }} href="/portfolio/">Portfolio</a>
+      <a class="button button--small" href={isHome ? '#contact' : '/#contact'}>Start a conversation</a>
+    </nav>
+
+    <details class="mobile-nav">
+      <summary aria-label="Open navigation"><span></span><span></span></summary>
+      <nav aria-label="Mobile navigation">
+        <a href={isHome ? '#focus' : '/#focus'}>Focus</a>
+        <a href={isHome ? '#approach' : '/#approach'}>Approach</a>
+        <a href="/portfolio/">Portfolio</a>
+        <a href={isHome ? '#contact' : '/#contact'}>Contact</a>
+      </nav>
+    </details>
+  </div>
+</header>

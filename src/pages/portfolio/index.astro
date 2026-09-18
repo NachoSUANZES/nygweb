@@ -1,0 +1,47 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import adg from '../../assets/images/portfolio/logo_adg_web.png';
+import adgravity from '../../assets/images/portfolio/Logo_adgravity.png';
+import neural from '../../assets/images/portfolio/Logo_neural.png';
+import v1mp from '../../assets/images/portfolio/Logo_v1mp.png';
+import lnm from '../../assets/images/portfolio/Logo_LNM.png';
+import impulsion from '../../assets/images/portfolio/Logo_Impulsion.png';
+import rubid from '../../assets/images/portfolio/Logo_Rubid.png';
+
+const title = 'Selected Portfolio | NYG International Investment';
+const description = 'Explore selected NYG investments in marketing technology, artificial intelligence, automation and digital services.';
+const holdings = [
+  { name: 'ADG Media Group', logo: adg, sector: 'Advertising & marketing technology', url: 'https://adgmediagroup.com/', copy: 'An independent group bringing together specialist companies across media, marketing technology, data and creative services.' },
+  { name: 'ADGRAVITY', logo: adgravity, sector: 'Programmatic media', url: 'https://adgravity.com/', copy: 'A specialist in programmatic advertising, combining media expertise, automation and transparent campaign optimisation.' },
+  { name: 'Neural.ONE', logo: neural, sector: 'AI & marketing attribution', url: 'https://neural.one/', copy: 'A marketing intelligence platform applying machine learning to attribution, audience understanding and media optimisation.' },
+  { name: 'V1 Marketing Partners', logo: v1mp, sector: 'Strategic marketing consultancy', url: 'https://v1mp.com/', copy: 'A consultancy focused on integrated media strategy, measurement and performance across the customer journey.' },
+  { name: 'La Naranja Mecánica', logo: lnm, sector: 'Digital product & creative', url: null, copy: 'A digital agency combining product thinking, creative execution and conversion-focused customer experiences.' },
+  { name: 'Impulsion', logo: impulsion, sector: 'Digital advertising', url: 'https://adimpulsion.com/', copy: 'A digital advertising company developing high-attention media solutions across display, video, native, audio, CTV and digital out-of-home.' },
+  { name: 'Rubid', logo: rubid, sector: 'AI & process automation', url: null, copy: 'An applied artificial intelligence company focused on automating complex operational processes and improving business efficiency.' },
+];
+---
+
+<BaseLayout {title} {description} canonicalPath="/portfolio/">
+  <section class="page-hero">
+    <div class="shell page-hero__grid">
+      <div><p class="eyebrow eyebrow--inverse">Selected portfolio</p><h1>Built around capability, not categories.</h1></div>
+      <p class="lede">A selection of businesses where technology, market insight and execution come together. This page is illustrative and does not represent the entirety of NYG's investments.</p>
+    </div>
+  </section>
+  <section class="page-section">
+    <div class="shell holdings">
+      {holdings.map((holding) => (
+        <article class="holding">
+          <div class="holding__identity"><Image src={holding.logo} alt={holding.name} width={210} /></div>
+          <div class="holding__body">
+            <p class="holding__meta">{holding.sector}</p>
+            <h2>{holding.name}</h2>
+            <p>{holding.copy}</p>
+            {holding.url && <a class="text-link" href={holding.url} target="_blank" rel="noopener noreferrer">Visit company <span aria-hidden="true">↗</span></a>}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

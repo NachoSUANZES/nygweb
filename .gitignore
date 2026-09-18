@@ -398,3 +398,22 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+# Astro / Node
+node_modules/
+dist/
+.astro/
+.wrangler/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+
+# Local design workflow
+.impeccable/
+
+# Browser QA artifacts
+.playwright-cli/
+output/
