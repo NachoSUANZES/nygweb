@@ -2,10 +2,12 @@
 
 ## Current and target architecture
 
-- Baseline: Cloudflare DNS proxying the apex domain to GitHub Pages.
-- Target: Cloudflare Workers Static Assets serving the Astro `dist/` directory.
+- Previous baseline: Cloudflare DNS proxying the apex domain to GitHub Pages.
+- Current production: Cloudflare Workers Static Assets serving the Astro `dist/` directory.
 - The Worker normalises `www.nyginvest.com` to the canonical apex domain before serving assets.
 - No public origin server, database or runtime secret is required for the static site.
+
+The production cutover completed on 18 September 2026. Worker version `0b2d4c42-e4b5-48c7-a58e-cc82cdc920eb` was verified before GitHub Pages was disabled.
 
 ## Safe deployment sequence
 
@@ -23,10 +25,10 @@ Production deployments are intentionally explicit (`npm run deploy`) until a lea
 
 ## Rollback
 
-1. Detach the Worker custom domains.
-2. Restore the recorded GitHub Pages DNS records.
-3. Confirm that Cloudflare serves the prior GitHub Pages origin.
-4. Keep the Worker deployment available for diagnosis; a rollback must not delete the last known-good release.
+1. Prefer a Cloudflare Worker version rollback to the last known-good deployment; this preserves the custom domains and avoids DNS changes.
+2. For a complete pre-migration rollback, restore commit `aaacfcd3f048a956d6f58012beca837fd6f42d10` on a recovery branch and re-enable GitHub Pages from that branch.
+3. Detach the Worker custom domains, then restore only the five recorded GitHub Pages web records from the DNS export. Do not alter MX or TXT records.
+4. Confirm that Cloudflare serves the recovered GitHub Pages origin before retiring the Worker deployment.
 
 ## Required evidence
 
