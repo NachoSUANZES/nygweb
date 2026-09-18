@@ -22,4 +22,4 @@ The public routes are `/`, `/portfolio/`, `/privacy/` and `/404.html`. Historica
 
 ## Deployment
 
-The production build is generated in `dist/`. Operational migration, rollback and domain-cutover instructions live in [docs/operations/cloudflare-migration.md](docs/operations/cloudflare-migration.md).
+The production build is generated in `dist/`. A push to `main` deploys automatically only after the GitHub Actions quality gate succeeds, then verifies the public endpoints. Operational deployment, rollback and domain-cutover instructions live in [docs/operations/cloudflare-migration.md](docs/operations/cloudflare-migration.md).

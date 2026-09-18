@@ -7,6 +7,7 @@
 - Removed the embedded GitHub credential from the local remote configuration and moved redesign work to an isolated branch.
 - Recorded the migration path from GitHub Pages to Cloudflare Workers Static Assets with a reversible domain cutover.
 - Migrated the apex and `www` hostnames to the verified Worker, preserved mail DNS and disabled the obsolete GitHub Pages deployment.
+- Added automatic production deployment after the `main` quality gate, using a dedicated scoped Cloudflare credential and post-deploy endpoint checks.
 
 ### Architecture
 
