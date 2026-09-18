@@ -4,10 +4,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ArrowLink from '../components/ArrowLink.astro';
 import heroImage from '../assets/images/real-estate.jpg';
 import specialImage from '../assets/images/special-situations.jpg';
-import adgLogo from '../assets/images/portfolio/logo_adg_web.png';
-import impulsionLogo from '../assets/images/portfolio/Logo_Impulsion.png';
-import neuralLogo from '../assets/images/portfolio/Logo_neural.png';
-import rubidLogo from '../assets/images/portfolio/Logo_Rubid.png';
+import adgLogo from '../assets/images/portfolio/light/adg.svg';
+import impulsionLogo from '../assets/images/portfolio/light/impulsion.svg';
+import neuralLogo from '../assets/images/portfolio/light/neural.png';
+import rubidLogo from '../assets/images/portfolio/light/rubid.webp';
 
 const title = 'NYG International Investment | Patient capital for enduring value';
 const description = 'NYG International Investment is a privately held investment company deploying permanent capital across private equity, real assets and selected special situations.';
@@ -95,10 +95,10 @@ const description = 'NYG International Investment is a privately held investment
         <ArrowLink href="/portfolio/" inverse={true}>View portfolio</ArrowLink>
       </div>
       <div class="logo-rail" aria-label="Selected portfolio company logos">
-        <div class="logo-cell"><Image src={adgLogo} alt="ADG Media Group" width={180} /></div>
-        <div class="logo-cell"><Image src={impulsionLogo} alt="Impulsion" width={180} /></div>
-        <div class="logo-cell"><Image src={neuralLogo} alt="Neural.ONE" width={180} /></div>
-        <div class="logo-cell"><Image src={rubidLogo} alt="Rubid" width={180} /></div>
+        <div class="logo-cell"><Image class="portfolio-logo portfolio-logo--adg" src={adgLogo} alt="ADG Media Group" width={180} /></div>
+        <div class="logo-cell"><Image class="portfolio-logo portfolio-logo--impulsion" src={impulsionLogo} alt="Impulsion" width={180} /></div>
+        <div class="logo-cell"><Image class="portfolio-logo portfolio-logo--neural" src={neuralLogo} alt="Neural.ONE" width={180} /></div>
+        <div class="logo-cell"><Image class="portfolio-logo portfolio-logo--rubid" src={rubidLogo} alt="Rubid" width={180} /></div>
       </div>
     </div>
   </section>

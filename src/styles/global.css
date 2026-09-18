@@ -111,8 +111,15 @@ p { max-width: 68ch; }
 .portfolio-preview__header .section-title { margin-bottom: 0; }
 .logo-rail { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-dark); border-left: 1px solid var(--line-dark); }
 .logo-cell { min-height: 11rem; display: grid; place-items: center; padding: 2rem; border-right: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); background: var(--white); }
-.logo-cell img { max-width: 11rem; max-height: 4.5rem; object-fit: contain; filter: grayscale(1); opacity: .78; transition: filter .25s ease, opacity .25s ease; }
-.logo-cell:hover img { filter: grayscale(0); opacity: 1; }
+.logo-cell img { max-width: 11rem; max-height: 4.5rem; object-fit: contain; opacity: .92; transition: opacity .2s ease, transform .2s ease; }
+.logo-cell:hover img { opacity: 1; transform: translateY(-1px); }
+.portfolio-logo--adg { max-height: 5.2rem !important; }
+.portfolio-logo--adgravity { max-height: 4.7rem !important; }
+.portfolio-logo--neural { max-height: 4.25rem !important; }
+.portfolio-logo--v1mp { max-height: 5.6rem !important; }
+.portfolio-logo--lnm { max-height: 4.8rem !important; }
+.portfolio-logo--impulsion { max-height: 4.25rem !important; }
+.portfolio-logo--rubid { max-height: 4.7rem !important; }
 
 .contact { padding-block: var(--section-space); background: var(--white); }
 .contact__grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(4rem, 10vw, 10rem); }
@@ -147,7 +154,7 @@ p { max-width: 68ch; }
 .holdings { border-top: 1px solid var(--line-light); }
 .holding { display: grid; grid-template-columns: minmax(10rem, .55fr) minmax(0, 1.45fr); gap: clamp(2rem, 8vw, 8rem); padding-block: 3.5rem; border-bottom: 1px solid var(--line-light); }
 .holding__identity { min-height: 7rem; display: flex; align-items: flex-start; }
-.holding__identity img { width: min(12rem, 100%); max-height: 4.5rem; object-fit: contain; object-position: left center; filter: grayscale(1); }
+.holding__identity img { width: min(15rem, 100%); max-height: 5rem; object-fit: contain; object-position: left center; }
 .holding__body h2 { margin-bottom: 1rem; color: var(--ink-900); font-size: clamp(1.8rem, 3vw, 2.7rem); }
 .holding__meta { margin-bottom: 1.25rem; color: var(--tide-500); font-size: .78rem; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; }
 .holding__body p { color: var(--graphite-600); }

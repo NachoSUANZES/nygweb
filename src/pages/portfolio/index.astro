@@ -1,24 +1,24 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import adg from '../../assets/images/portfolio/logo_adg_web.png';
-import adgravity from '../../assets/images/portfolio/Logo_adgravity.png';
-import neural from '../../assets/images/portfolio/Logo_neural.png';
-import v1mp from '../../assets/images/portfolio/Logo_v1mp.png';
-import lnm from '../../assets/images/portfolio/Logo_LNM.png';
-import impulsion from '../../assets/images/portfolio/Logo_Impulsion.png';
-import rubid from '../../assets/images/portfolio/Logo_Rubid.png';
+import adg from '../../assets/images/portfolio/light/adg.svg';
+import adgravity from '../../assets/images/portfolio/light/adgravity.png';
+import neural from '../../assets/images/portfolio/light/neural.png';
+import v1mp from '../../assets/images/portfolio/light/v1mp.svg';
+import lnm from '../../assets/images/portfolio/light/lnm.png';
+import impulsion from '../../assets/images/portfolio/light/impulsion.svg';
+import rubid from '../../assets/images/portfolio/light/rubid.webp';
 
 const title = 'Selected Portfolio | NYG International Investment';
 const description = 'Explore selected NYG investments in marketing technology, artificial intelligence, automation and digital services.';
 const holdings = [
-  { name: 'ADG Media Group', logo: adg, sector: 'Advertising & marketing technology', url: 'https://adgmediagroup.com/', copy: 'An independent group bringing together specialist companies across media, marketing technology, data and creative services.' },
-  { name: 'ADGRAVITY', logo: adgravity, sector: 'Programmatic media', url: 'https://adgravity.com/', copy: 'A specialist in programmatic advertising, combining media expertise, automation and transparent campaign optimisation.' },
-  { name: 'Neural.ONE', logo: neural, sector: 'AI & marketing attribution', url: 'https://neural.one/', copy: 'A marketing intelligence platform applying machine learning to attribution, audience understanding and media optimisation.' },
-  { name: 'V1 Marketing Partners', logo: v1mp, sector: 'Strategic marketing consultancy', url: 'https://v1mp.com/', copy: 'A consultancy focused on integrated media strategy, measurement and performance across the customer journey.' },
-  { name: 'La Naranja Mecánica', logo: lnm, sector: 'Digital product & creative', url: null, copy: 'A digital agency combining product thinking, creative execution and conversion-focused customer experiences.' },
-  { name: 'Impulsion', logo: impulsion, sector: 'Digital advertising', url: 'https://adimpulsion.com/', copy: 'A digital advertising company developing high-attention media solutions across display, video, native, audio, CTV and digital out-of-home.' },
-  { name: 'Rubid', logo: rubid, sector: 'AI & process automation', url: null, copy: 'An applied artificial intelligence company focused on automating complex operational processes and improving business efficiency.' },
+  { name: 'ADG Media Group', logo: adg, logoClass: 'portfolio-logo--adg', sector: 'Advertising & marketing technology', url: 'https://adgmediagroup.com/', copy: 'An independent group bringing together specialist companies across media, marketing technology, data and creative services.' },
+  { name: 'ADGRAVITY', logo: adgravity, logoClass: 'portfolio-logo--adgravity', sector: 'Programmatic media', url: 'https://adgravity.com/', copy: 'A specialist in programmatic advertising, combining media expertise, automation and transparent campaign optimisation.' },
+  { name: 'Neural.ONE', logo: neural, logoClass: 'portfolio-logo--neural', sector: 'AI & marketing attribution', url: 'https://neural.one/', copy: 'A marketing intelligence platform applying machine learning to attribution, audience understanding and media optimisation.' },
+  { name: 'V1 Marketing Partners', logo: v1mp, logoClass: 'portfolio-logo--v1mp', sector: 'Strategic marketing consultancy', url: 'https://v1mp.com/', copy: 'A consultancy focused on integrated media strategy, measurement and performance across the customer journey.' },
+  { name: 'La Naranja Mecánica', logo: lnm, logoClass: 'portfolio-logo--lnm', sector: 'Digital product & creative', url: null, copy: 'A digital agency combining product thinking, creative execution and conversion-focused customer experiences.' },
+  { name: 'Impulsion', logo: impulsion, logoClass: 'portfolio-logo--impulsion', sector: 'Digital advertising', url: 'https://adimpulsion.com/', copy: 'A digital advertising company developing high-attention media solutions across display, video, native, audio, CTV and digital out-of-home.' },
+  { name: 'Rubid', logo: rubid, logoClass: 'portfolio-logo--rubid', sector: 'AI & process automation', url: null, copy: 'An applied artificial intelligence company focused on automating complex operational processes and improving business efficiency.' },
 ];
 ---
 
@@ -33,7 +33,7 @@ const holdings = [
     <div class="shell holdings">
       {holdings.map((holding) => (
         <article class="holding">
-          <div class="holding__identity"><Image src={holding.logo} alt={holding.name} width={210} /></div>
+          <div class="holding__identity"><Image class={`portfolio-logo ${holding.logoClass}`} src={holding.logo} alt={holding.name} width={240} /></div>
           <div class="holding__body">
             <p class="holding__meta">{holding.sector}</p>
             <h2>{holding.name}</h2>

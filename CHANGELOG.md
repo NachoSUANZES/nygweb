@@ -19,6 +19,7 @@
 - Defined the “Measured conviction” product and visual direction for NYG International Investment.
 - Corrected NYG's positioning from third-party wealth management to a privately held company investing its own capital.
 - Replaced the legacy template with a responsive, mobile-first editorial experience and accessible contact flow.
+- Replaced every portfolio mark with its official light-background asset from the corresponding company repository and normalised optical sizing without suppressing brand colours.
 
 ### Security
 
