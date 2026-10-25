@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+### 2026-10-25 · Review fixes and polish
+
+- Fixed the home logo rail on phones: grid tracks could not shrink below the logo width and pushed the page to 455px on a 412px screen.
+- Reduced the Venture studio chapter to MakiLab alone; its products (Makinotes, Akorto) are presented on makilab.dev, not on NYG. Updated the MakiLab mark to its current colours.
+- Linked Rubid to rubid.io.
+- Tightened pacing: shorter section spacing, hero copy that leaves the image caption inside the first desktop screen, a centred and shorter “Our horizon” block, principles without the empty gap under their number, and a more compact contact form on phones.
+
 ### Security and operations
 
 - Removed the embedded GitHub credential from the local remote configuration and moved redesign work to an isolated branch.
