@@ -7,6 +7,7 @@
 - Fixed the home logo rail on phones: grid tracks could not shrink below the logo width and pushed the page to 455px on a 412px screen.
 - Reduced the Venture studio chapter to MakiLab alone; its products (Makinotes, Akorto) are presented on makilab.dev, not on NYG. Updated the MakiLab mark to its current colours.
 - Linked Rubid to rubid.io.
+- Updated vulnerable build dependencies (`npm audit fix`, wrangler 4.152.0). The CI audit now fails on any advisory in shipped dependencies and on critical advisories in tooling; the remaining high advisory is undici inside wrangler, a deploy tool that never reaches the site, with no fix released yet. Same policy as makilab.dev.
 - Tightened pacing: shorter section spacing, hero copy that leaves the image caption inside the first desktop screen, a centred and shorter “Our horizon” block, principles without the empty gap under their number, and a more compact contact form on phones.
 
 ### Security and operations
